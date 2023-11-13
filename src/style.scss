@@ -166,4 +166,20 @@ body {
       }
     }
   }
+
+  @media screen and (max-width: 769px) {
+    .game-Wrapper {
+      height: 500px;
+      width: 280px;
+
+      .title-wrapper h1 {
+        font-size: 20px;
+      }
+
+      h1 {
+        position: relative;
+        font-size: 20px;
+      }
+    }
+  }
 }

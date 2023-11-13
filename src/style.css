@@ -151,5 +151,18 @@ body {
   border-left: 0;
   border-right: 0;
 }
+@media screen and (max-width: 769px) {
+  .header .game-Wrapper {
+    height: 500px;
+    width: 280px;
+  }
+  .header .game-Wrapper .title-wrapper h1 {
+    font-size: 20px;
+  }
+  .header .game-Wrapper h1 {
+    position: relative;
+    font-size: 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
