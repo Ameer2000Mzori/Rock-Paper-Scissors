@@ -1,4 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+$greenBGC: rgb(101, 233, 129);
+
 body {
   padding: 0;
   margin: 0;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #94b0ec;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23ffffff' fill-opacity='0.29' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+  .game-Wrapper {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    text-align: start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 25px 5px rgb(70, 71, 71);
+
+    .title-wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 25%;
+      width: 100%;
+      background-color: $greenBGC;
+      border-radius: 10px 10px 0 0;
+
+      h1 {
+        position: relative;
+        font-size: 25px;
+      }
+
+      h1:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        height: 3px;
+        width: 100%;
+        background-color: rgb(252, 252, 252);
+      }
+    }
+
+    .play-Wrapper {
+      display: flex;
+      height: 50%;
+      width: 90%;
+      font-size: 12px;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .player-Wrapper {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+
+        .player-score-Wrapper {
+          height: 50%;
+          padding: 0;
+          margin: 0;
+          text-align: start;
+        }
+        .player-Btn-Wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          text-align: center;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          height: 50%;
+          width: 100%;
+
+          i {
+            font-size: 45px;
+          }
+
+          i:hover {
+            cursor: pointer;
+            font-size: 45px;
+            color: #94b0ec;
+            border-style: solid;
+            border-width: 3px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+          }
+        }
+      }
+      .Pc-Wrapper {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+
+        .Pc-score-Wrapper {
+          height: 50%;
+          padding: 0;
+          margin: 0;
+          text-align: start;
+        }
+        .Pc-game-Btn-Wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          text-align: center;
+          align-items: center;
+          padding: 0;
+          margin: 0;
+          height: 50%;
+          width: 100%;
+
+          i {
+            font-size: 45px;
+          }
+        }
+      }
+    }
+    .restart-Wrapper {
+      display: flex;
+      text-align: start;
+      align-items: start;
+      justify-content: start;
+      height: 10%;
+      width: 90%;
+
+      i {
+        font-size: 35px;
+      }
+
+      i:hover {
+        cursor: pointer;
+        font-size: 37px;
+        color: #94b0ec;
+        border-style: solid;
+        border-width: 3px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+  }
 }
