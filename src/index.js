@@ -1,6 +1,8 @@
 // getting game elements
 const textLoseWin = document.getElementsByClassName("text-lose-win")[0];
-
+const restartBtn = document.getElementById("restart-Btn");
+const restartWholeGame =
+  document.getElementsByClassName("restart-whole-game")[0];
 // getting player elements
 const playerBtnWrapper = document.querySelectorAll(".player-Btn-Wrapper")[0];
 const playerScoreText = document.getElementsByClassName("player-score-h1")[0];
@@ -14,17 +16,18 @@ let pScore = 0;
 let pcScore = 0;
 
 // our game func
-function randNum(e) {
+function startGame(e) {
   // player functions
   const playerScore = e.target.id;
   playerBtnWrapper.children[playerScore].classList.add("active");
-  //   playerBtnWrapper.classList.add("active");
+  playerBtnWrapper.classList.add("active");
 
   // pc functions
   const randNum = Math.round(Math.random() * 2);
   PcGameBtnWrapper.children[randNum].classList.add("active");
 
   // game logic
+
   if (playerScore > randNum) {
     console.log("payer won");
     pScore = pScore + 1;
@@ -36,7 +39,7 @@ function randNum(e) {
     console.log("payer lost");
     pcScore = pcScore + 1;
     console.log(pcScore);
-    pcScoreText.textContent = `YOU - ${pcScore}`;
+    pcScoreText.textContent = `Computer - ${pcScore}`;
     textLoseWin.textContent = `YOU LOST`;
     textLoseWin.style.color = "red";
   } else {
@@ -46,5 +49,26 @@ function randNum(e) {
   }
 }
 
+//restart game function
+
+function restartGame() {
+  // score and text restart :
+  textLoseWin.textContent = `CLICK TO PLAY`;
+  textLoseWin.style.color = "black";
+  playerBtnWrapper.classList.remove("active");
+  // our for loop to remove classes from childeren
+  for (const child of playerBtnWrapper.children) {
+    child.classList.remove("active");
+  }
+  for (const child of PcGameBtnWrapper.children) {
+    child.classList.remove("active");
+  }
+}
+
+// restart the whole game
+function restartWholeGame() {}
+
 // our eventlinsters
-playerBtnWrapper.addEventListener("click", randNum);
+playerBtnWrapper.addEventListener("click", startGame);
+restartBtn.addEventListener("click", restartGame);
+restartWholeGame.addEventListener("click", restartWholeGame);

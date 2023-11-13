@@ -157,20 +157,20 @@ body {
     }
     .restart-Wrapper {
       display: flex;
-      text-align: start;
-      align-items: start;
-      justify-content: start;
+      text-align: center;
+      align-items: center;
+      justify-content: space-between;
       padding-top: 10px;
       height: 10%;
       width: 90%;
 
       i {
-        font-size: 35px;
+        font-size: 15px;
       }
 
       i:hover {
         cursor: pointer;
-        font-size: 37px;
+        font-size: 17px;
         color: #94b0ec;
         border-style: solid;
         border-width: 3px;
