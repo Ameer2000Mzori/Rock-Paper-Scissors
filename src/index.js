@@ -1,3 +1,5 @@
+import "./style.css";
+
 // getting game elements
 const textLoseWin = document.getElementsByClassName("text-lose-win")[0];
 const restartBtn = document.getElementById("restart-Btn");
