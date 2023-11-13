@@ -1,8 +1,7 @@
 // getting game elements
 const textLoseWin = document.getElementsByClassName("text-lose-win")[0];
 const restartBtn = document.getElementById("restart-Btn");
-const restartWholeGame =
-  document.getElementsByClassName("restart-whole-game")[0];
+const gameRestartBtn = document.getElementsByClassName("restart-whole-game")[0];
 // getting player elements
 const playerBtnWrapper = document.querySelectorAll(".player-Btn-Wrapper")[0];
 const playerScoreText = document.getElementsByClassName("player-score-h1")[0];
@@ -18,6 +17,7 @@ let pcScore = 0;
 // our game func
 function startGame(e) {
   // player functions
+
   const playerScore = e.target.id;
   playerBtnWrapper.children[playerScore].classList.add("active");
   playerBtnWrapper.classList.add("active");
@@ -52,6 +52,9 @@ function startGame(e) {
 //restart game function
 
 function restartGame() {
+  if (pcScore || pScore >= 5) {
+    restartWholeGame();
+  }
   // score and text restart :
   textLoseWin.textContent = `CLICK TO PLAY`;
   textLoseWin.style.color = "black";
@@ -66,9 +69,25 @@ function restartGame() {
 }
 
 // restart the whole game
-function restartWholeGame() {}
+function restartWholeGame() {
+  pScore = 0;
+  pcScore = 0;
+  playerScoreText.textContent = `YOU - ${pScore}`;
+  pcScoreText.textContent = `Computer - ${pcScore}`;
+  // score and text restart :
+  textLoseWin.textContent = `CLICK TO PLAY`;
+  textLoseWin.style.color = "black";
+  playerBtnWrapper.classList.remove("active");
+  // our for loop to remove classes from childeren
+  for (const child of playerBtnWrapper.children) {
+    child.classList.remove("active");
+  }
+  for (const child of PcGameBtnWrapper.children) {
+    child.classList.remove("active");
+  }
+}
 
 // our eventlinsters
 playerBtnWrapper.addEventListener("click", startGame);
 restartBtn.addEventListener("click", restartGame);
-restartWholeGame.addEventListener("click", restartWholeGame);
+gameRestartBtn.addEventListener("click", restartWholeGame);
