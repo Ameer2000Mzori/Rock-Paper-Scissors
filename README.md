@@ -44,8 +44,12 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[multi-page responsive website]**
-- **[flex & grid]**
+- **[responsive website]**
+- **[Flex ]**
+- **[Local Storage Use]**
+- **[Scss ]**
+- **[Web Pack]**
+- **[Clean Code]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
