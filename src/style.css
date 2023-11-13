@@ -169,6 +169,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
+  font-size: 25px;
 }
 @media screen and (max-width: 769px) {
   .header .game-Wrapper {
