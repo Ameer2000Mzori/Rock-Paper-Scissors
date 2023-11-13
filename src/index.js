@@ -52,7 +52,9 @@ function startGame(e) {
 //restart game function
 
 function restartGame() {
-  if (pcScore || pScore >= 5) {
+  if (pScore >= 5) {
+    restartWholeGame();
+  } else if (pcScore >= 5) {
     restartWholeGame();
   }
   // score and text restart :
