@@ -8,8 +8,8 @@ const PcGameBtnWrapper = document.querySelectorAll(".Pc-game-Btn-Wrapper")[0];
 function randNum(e) {
   // player functions
   const playerScore = e.target.id;
-
   playerBtnWrapper.children[playerScore].classList.add("active");
+  playerBtnWrapper.classList.add("active");
   console.log("Player Point : ", playerScore);
 
   // pc functions
@@ -17,7 +17,7 @@ function randNum(e) {
   console.log(PcGameBtnWrapper.children[randNum]);
   PcGameBtnWrapper.children[randNum].classList.add("active");
 
-  // game functions
+  // game logic
   console.log("PC Point : ", randNum);
   if (playerScore > randNum) {
     console.log("payer won");

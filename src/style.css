@@ -105,6 +105,9 @@ body {
 .header .game-Wrapper .play-Wrapper .player-Wrapper .player-Btn-Wrapper i.active {
   color: #94b0ec;
 }
+.header .game-Wrapper .play-Wrapper .player-Wrapper .player-Btn-Wrapper.active {
+  pointer-events: none;
+}
 .header .game-Wrapper .play-Wrapper .Pc-Wrapper {
   width: 100%;
   height: 50%;
@@ -142,6 +145,7 @@ body {
   text-align: start;
   align-items: start;
   justify-content: start;
+  padding-top: 10px;
   height: 10%;
   width: 90%;
 }
@@ -157,6 +161,14 @@ body {
   border-top: 0;
   border-left: 0;
   border-right: 0;
+}
+.header .game-Wrapper .bottom-text {
+  display: flex;
+  height: 10%;
+  width: 90%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
 }
 @media screen and (max-width: 769px) {
   .header .game-Wrapper {

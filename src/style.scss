@@ -114,6 +114,10 @@ body {
             color: #94b0ec;
           }
         }
+
+        .player-Btn-Wrapper.active {
+          pointer-events: none;
+        }
       }
       .Pc-Wrapper {
         width: 100%;
@@ -156,6 +160,7 @@ body {
       text-align: start;
       align-items: start;
       justify-content: start;
+      padding-top: 10px;
       height: 10%;
       width: 90%;
 
@@ -173,6 +178,14 @@ body {
         border-left: 0;
         border-right: 0;
       }
+    }
+    .bottom-text {
+      display: flex;
+      height: 10%;
+      width: 90%;
+      text-align: center;
+      align-items: center;
+      justify-content: space-evenly;
     }
   }
 
